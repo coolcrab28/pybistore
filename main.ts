@@ -7,6 +7,6 @@ for await (const conn of listener) {
 
 async function serve(conn: Deno.Conn) {
   for await (const { respondWith } of Deno.serveHttp(conn)) {
-    respondWith(new Response("Hello world"));
+    respondWith(new Response("Hello world, this change was made in GitHub!"));
   }
 }
